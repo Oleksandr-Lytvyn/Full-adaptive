@@ -35,7 +35,7 @@
 .header__contacts {
   display: flex;
 
-  @media screen and (min-width: 768px) and (max-width: 1599px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: column;
     justify-content: flex-end;
   }
@@ -104,7 +104,7 @@
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-  // @media screen and (min-width: 768px) and (max-width: 1599px) {
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
   //   bottom: -34px;
   // }
 }
