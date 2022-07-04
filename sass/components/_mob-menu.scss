@@ -10,6 +10,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  transform: translateX(100%);
+  transition: transform 250ms var(--cubic);
+
+  &.is-open {
+    transform: translateX(0);
+  }
 }
 
 .mob-menu__btn {

@@ -6,8 +6,11 @@
 }
 
 .clients__item {
-  width: 210px;
+  width: 226px;
   height: 92px;
+  @include desktop {
+    width: 170px;
+  }
 }
 
 .clients__link {

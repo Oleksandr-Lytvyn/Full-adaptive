@@ -6,7 +6,19 @@
 
 .footer .container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+
+  align-items: center;
+  @include desktop {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.footer__top-box {
+  @include tablet {
+    display: flex;
+  }
 }
 
 .footer__address-item:not(:last-child) {
@@ -16,6 +28,10 @@
 .footer__address {
   font-style: normal;
   margin-top: 20px;
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .address-text {
@@ -29,7 +45,19 @@
 }
 
 .footer__contacts {
-  margin-right: 70px;
+  @include tablet {
+    margin-right: 165px;
+  }
+  @include desktop {
+    margin-right: 70px;
+  }
+}
+
+.footer__socials {
+  margin-top: 60px;
+  @include tablet {
+    margin-top: 0;
+  }
 }
 
 .footer__socials-call {
@@ -39,20 +67,31 @@
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 20px;
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .sign {
-  margin-left: auto;
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 0;
+    margin-left: auto;
+  }
 }
 
 .sign__call {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 20px;
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .sign__input {
@@ -74,10 +113,16 @@
 
 .sign form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .sign__btn {
   cursor: pointer;
+  width: 200px;
   height: 50px;
   font-family: inherit;
   font-weight: 700;
@@ -88,6 +133,7 @@
   letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
+  margin-top: 20px;
   margin-left: 12px;
   padding: 10px 29px;
   border-radius: 4px;
@@ -97,6 +143,9 @@
   &:hover,
   &:focus {
     background-color: #188ce8;
+  }
+  @include desktop {
+    margin-top: 0;
   }
 }
 

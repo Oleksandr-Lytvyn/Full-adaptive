@@ -1,7 +1,6 @@
 .header {
   border-bottom: 1px solid var(--lightgrey-color);
   width: 100%;
-  height: 80px;
 }
 
 .header-mobile {
@@ -24,16 +23,13 @@
   }
   @include desktop {
     justify-content: space-between;
-    padding: 25px 215px;
+    padding: 0;
   }
 }
 
-// .header-desktop > * {
-//   align-items: center;
-// }
-
 .header__nav {
   display: flex;
+  align-items: center;
 }
 
 .header__contacts {
@@ -125,4 +121,16 @@
 .accent-link:hover,
 .accent-link:focus {
   color: var(--accent-color);
+}
+
+.header-mobile__btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background-color: transparent;
+  transition: fill 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    fill: #188ce8;
+  }
 }
