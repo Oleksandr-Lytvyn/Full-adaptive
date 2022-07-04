@@ -45,6 +45,11 @@
 }
 
 .footer__contacts {
+  @media screen and (max-width: 1599px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @include tablet {
     margin-right: 165px;
   }

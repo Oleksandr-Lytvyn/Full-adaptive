@@ -6,13 +6,18 @@
 .catalog__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  gap: 30px;
+  // margin-top: -30px;
+  // margin-left: -30px;
 }
 
 .catalog__item {
-  margin-left: 30px;
-  margin-top: 30px;
+  @include tablet {
+    max-width: 354px;
+  }
+  @include desktop {
+    max-width: 370px;
+  }
 }
 
 .catalog__link {
@@ -33,13 +38,14 @@
   position: absolute;
   top: 0;
 
+  height: 100%;
   font-size: 18px;
   line-height: 1.56;
   padding: 63px 24px;
   color: var(--white-color);
   background-color: var(--card-bg-color);
 
-  transform: translateY(100%);
+  transform: translateY(120%);
   transition: transform 250ms var(--cubic);
 
   .catalog__link:hover & {
