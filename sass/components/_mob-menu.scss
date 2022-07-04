@@ -11,11 +11,11 @@
   flex-direction: column;
   justify-content: space-between;
 
-  transform: translateX(100%);
+  transform: scale(0);
   transition: transform 250ms var(--cubic);
 
   &.is-open {
-    transform: translateX(0);
+    transform: scale(1);
   }
 }
 
